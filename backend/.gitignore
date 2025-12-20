@@ -1,0 +1,14 @@
+# Ignore node_modules directory
+
+node_modules/
+
+# therwise entries...
+
+# is you add gitignore then this file also added on all of these 
+
+# git add gitignore
+
+# if git by mistake add then remove from this syntax
+
+
+# git rm -r --cached node_modules

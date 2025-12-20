@@ -1,0 +1,46 @@
+// models :=Blue print Of our Data Base
+
+
+// HTTP Response Status Codes
+
+// HTTP status codes batate hain ki request successful hui ya nahi.
+
+// 1️⃣ Informational Responses (100–199)
+
+// Request receive ho gayi
+
+// Process chal raha hai
+
+// 2️⃣ Successful Responses (200–299)
+
+// Request successfully complete
+
+// Example: 200 OK, 201 Created
+
+// 3️⃣ Redirection Messages (300–399)
+
+// Resource kisi aur location par hai
+
+// Example: 301 Moved Permanently, 302 Found
+
+// 4️⃣ Client Error Responses (400–499)
+
+// Client side mistake
+
+// Example:
+
+// 400 Bad Request
+
+// 401 Unauthorized
+
+// 404 Not Found
+
+// 5️⃣ Server Error Responses (500–599)
+
+// Server side problem
+
+// Example:
+
+// 500 Internal Server Error
+
+// 503 Service Unavailable

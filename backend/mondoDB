@@ -1,0 +1,64 @@
+                  //No sql
+
+//Data store in the form of documents 
+ // ===============terminal Syntax==============================================================
+
+
+ //mongosh 
+
+
+// show dbs
+
+// use myDatabaseName
+
+// show collections
+
+// db.createCollection("users");
+
+// db.users.insertOne({
+//   id: 1,
+//   username: "Faiz",
+//   age: 20
+// });
+
+
+// db.users.find()
+
+
+// update one document
+// db.users.updateOne(
+//   { id: 1 },
+//   { $set: { age: 21 } }
+// );
+
+
+
+// update many documents
+// db.users.updateMany(
+//   { username: "Faiz" },
+//   { $set: { age: 22 } }
+// );
+
+
+
+// db.users.deleteMany({});
+
+
+
+
+//for extra information 
+
+// https://mongoosejs.com/
+
+
+
+// =======================================================================================
+
+
+              //    CRUD METHOD 
+        //   C->CREATE
+        //   R->READ
+        //   U->UPDATE
+        //   D->DELETE
+
+
