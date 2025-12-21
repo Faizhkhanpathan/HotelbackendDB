@@ -1,5 +1,12 @@
+
 const mongoose = require('mongoose');
-const mongoURL ='mongodb://127.0.0.1:27017/Addmin';
+require('dotenv').config();
+
+const mongoURL = process.env.MONGODB_URL_LOCAL;
+if (!mongoURL) {
+  console.error("MONGODB_URL_LOCAL not found");
+  process.exit(1);
+}
 
 mongoose.connect(mongoURL);
 

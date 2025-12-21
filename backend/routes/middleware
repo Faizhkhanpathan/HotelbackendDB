@@ -1,0 +1,15 @@
+//for authentication
+// npm i passport passport-local 
+
+// bich me hone wale :- process phase function is known as middle ware
+
+// middle ware :- use for loggin (requse response time and date )
+
+//middle ware check:- logging ,authentication ,modified request data 
+
+
+
+//  const logRequest=(req,res,next)=>{
+// console.log(`[${new Date().toLocaleString()}] Request Made to : ${req.orginalUrl}`);
+// next();
+//  }

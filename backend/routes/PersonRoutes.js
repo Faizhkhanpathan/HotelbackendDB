@@ -33,7 +33,14 @@ res.status(404).json({error:'Invalid worktype'});
  res.status(500).json({error:'invalid Work type'})
     }
  })
- router.get('/',async (req,res)=>{
+
+ const logRequest=(req,res,next)=>{
+console.log(`[${new Date().toLocaleString()}] Request Made to : ${req.orginalUrl}`);
+next();
+ }
+ router.use(logRequest);
+ 
+ router.get('/', async (req,res)=>{
    try{
    const data=await Person.find();
    console.log('data saved');

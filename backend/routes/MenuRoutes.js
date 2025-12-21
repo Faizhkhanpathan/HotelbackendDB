@@ -16,7 +16,15 @@ res.status(500).json({error:'Internal server error'});
 })
 
 
-router.get('/', async (req,res)=>{
+//logging means kis time per kitne log kis samay and ks date per aaye konse time pe konsa url hit hua 
+
+// middle ware function
+
+ const logRequest =(req,res,next)=>{
+  console.log(`${new Date().toLocaleString()} Request Made to : ${req.originalUrl}`);
+  next();
+ }
+router.get('/', logRequest ,async (req,res)=>{
   try{
 const newMenu= await Menu.find();
 res.status(201).json(newMenu);

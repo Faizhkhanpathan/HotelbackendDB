@@ -1,0 +1,7 @@
+//AUTHENTICATION
+
+// Passport.js(very eassy for authentication)
+
+// npm install passport passport-local
+
+// npm install bcrypt  (convert password into hash function:-hash pasword +salt)

@@ -1,0 +1,50 @@
+; Host Node.js Server (Short Notes)
+
+; =======================================================================================
+
+; Localhost server is accessible only on our computer
+
+; To make APIs accessible to all users, server must be hosted online
+
+; Hosting makes application available 24×7 on the Internet
+
+; Cloud companies provide server + storage + network
+
+; Some platforms are paid, some offer free tier for developers
+
+; 🚀 Popular Platforms to Host Node.js Applications
+; 🔹 Free / Developer-Friendly Platforms
+
+; Render – Easy, free tier, good for Node.js & MongoDB
+
+; Railway – Simple deployment, limited free credits
+
+; Cyclic – Free Node.js hosting (good for APIs)
+
+; Glitch – Small demo projects
+
+; Fly.io – Free tier, Docker-based
+
+; Deta Space – Free micro apps (limited)
+
+; 🔹 Paid / Cloud Platforms
+
+; AWS (EC2 / Elastic Beanstalk) – Powerful but costly & complex
+
+; Google Cloud Platform (GCP) – Scalable, paid
+
+; Microsoft Azure – Enterprise-level hosting
+
+; DigitalOcean – Affordable VPS
+
+; Vercel – Best for frontend + serverless APIs
+
+; Netlify – Frontend + serverless functions
+
+; ⭐ Best Choice for Students / Beginners
+
+; ✅ Render
+
+; ✅ Railway
+
+; ✅ Cyclic
