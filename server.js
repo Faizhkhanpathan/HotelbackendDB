@@ -47,23 +47,30 @@ const db=require('./db');
 const bodyParser = require('body-parser');
 const PersonRoutes = require('./Router/PersonRoutes');
 const MenuRoutes = require('./Router/MenuRoutes');
-
+const { config } = require('dotenv');
+require('dotenv').config();
 app.use(bodyParser.json());  //store into req.body
 app.use(express.json());
-app.get('/',(req,res)=>{
-    res.send("welcome to my hotel Faiz");
-})
+
+const logRequest =(req,res,next)=> { 
+     console.log(`[${new Date().toLocaleString()}] Request made to: ${req.originalUrl}`);
+    next();
+};
+app.use(logRequest);
+// app.get('/',(req,res)=>{
+//     res.send("welcome to my hotel Faiz");
+// })
 
 
-app.use('/Person',PersonRoutes);
-app.use('/Menu',MenuRoutes);
+app.use('/Person',logRequest,PersonRoutes);
+app.use('/Menu',logRequest,MenuRoutes);
 
 
 // = ===================================================================================================
                             //   Parameterized url
 // = ===================================================================================================
-
-app.listen(3000,()=>{
+const PORT = process.env.PORT || 3000;
+app.listen(PORT,()=>{
     console.log("Server is runing");
 })
 

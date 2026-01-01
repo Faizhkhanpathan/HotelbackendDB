@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const Menu = require('../models/Menu');
 
-router.post('/', async (req,res)=>{
+
+// router.use(logRequest);
+router.post('/',  async (req,res)=>{
     try{
 const data = req.body;
     const Menuschema = new Menu(data);

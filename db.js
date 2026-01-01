@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-
-const mongodb_Url = "mongodb://127.0.0.1:27017/mydb";
+require('dotenv').config();
+const mongoURL = process.env.mongodb_Url;
 
 const db = mongoose.connection;
 
-mongoose.connect(mongodb_Url);
+mongoose.connect(mongoURL);
 
 db.on('connected',()=>{
     console.log("databse is connected");
