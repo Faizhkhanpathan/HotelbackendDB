@@ -48,22 +48,30 @@ const bodyParser = require('body-parser');
 const PersonRoutes = require('./Router/PersonRoutes');
 const MenuRoutes = require('./Router/MenuRoutes');
 const { config } = require('dotenv');
+// const passport= require('passport');
+const passport = require('./auth');
+const Menu = require('./models/Menu');
 require('dotenv').config();
 app.use(bodyParser.json());  //store into req.body
 app.use(express.json());
+app.use(passport.initialize());
+
 
 const logRequest =(req,res,next)=> { 
      console.log(`[${new Date().toLocaleString()}] Request made to: ${req.originalUrl}`);
     next();
 };
 app.use(logRequest);
-// app.get('/',(req,res)=>{
-//     res.send("welcome to my hotel Faiz");
-// })
+
+const localAuthMiddleware=passport.authenticate('person-local', { session: false });
+app.get('/',localAuthMiddleware,function(req,res){
+    res.send("welcome to my hotel Faiz");
+})
 
 
-app.use('/Person',logRequest,PersonRoutes);
+app.use('/Person',logRequest,localAuthMiddleware,PersonRoutes);
 app.use('/Menu',logRequest,MenuRoutes);
+
 
 
 // = ===================================================================================================

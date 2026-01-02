@@ -20,6 +20,14 @@ const Menuschema = mongoose.Schema({
         type:String,
         enum:["bun", "potato", "spices"],
         required:true
+    },
+    username:{
+        type:String,
+        required:true
+    },
+    password:{
+        type:String,
+        required:true
     }
 })
 const Menu = mongoose.model('Menu',Menuschema);
